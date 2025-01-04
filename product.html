@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLON’s - Product Details</title>
+    <link rel="icon" href="img2/simplons_logo-removebg-preview.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffd1e8;
+            margin: 0;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        .navbar .dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8d1d1; /* Light pink for branding */
+}
+
+        .header {
+            background-color: #000000;
+            color: #ffd1e8;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .product-detail {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-detail .product-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .product-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .product-price {
+            font-size: 22px;
+            color: #000000;
+            margin-top: 15px;
+        }
+
+        .product-description {
+            font-size: 18px;
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #ffd1e8;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #000000;
+            color: #ffd1e8;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .additional-products {
+            margin-top: 30px;
+        }
+
+        .additional-products .product {
+            font-size: 30px;
+            font-weight: 600;
+            cursor: pointer;
+           
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+           
+        }
+
+        .additional-products .product:hover {
+            background-color: #ffd1e8;
+        }
+
+        .additional-products .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 13px;
+        }
+
+        /* Styling for collapsed details */
+        .product-details-collapse {
+            background: #ffd1e8;
+            border: 1px solid #ffd1e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-title-sm {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/make_me_a_logo_of_a_beauty_website_called_SIMPLON_s_beauty_care__website_theme_is_primary_color_is_pink_secondary_is_white_and_black__make_it_in_a_circle-removebg-preview.png" alt="SIMPLON Beauty Care" style="width: 150px; height: 90px;">
+            </a>
+          
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0"
+                    style="font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="aboutus.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="contactus.html">Contact us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="brandsDropdownNav" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="brandsDropdownNav">
+                            <li><a class="dropdown-item" href="https://www.loreal.com/en/">L'Oréal</a></li>
+                            <li><a class="dropdown-item" href="https://www.esteelauder.com/">Estée Lauder</a></li>
+                            <li><a class="dropdown-item" href="https://www.lancome-usa.com/">Lancôme</a></li>
+                            <li><a class="dropdown-item" href="https://www.maccosmetics.com/">MAC Cosmetics</a></li>
+                            <li><a class="dropdown-item" href="https://www.makeupcityshop.com/">Maybelline</a></li>
+                            <li><a class="dropdown-item" href="https://www.clinique.com/">Clinique</a></li>
+                            <li><a class="dropdown-item" href="https://www.chanel.com/in/">Chanel</a></li>
+                            <li><a class="dropdown-item" href="https://www.dior.com/en_us/beauty/home-makeup/home-makeup.html">Dior</a></li>
+                            <li><a class="dropdown-item" href="https://www.narscosmetics.com/">NARS</a></li>
+                            <li><a class="dropdown-item" href="https://hudabeauty.com/">Huda Beauty</a></li>
+                            <li><a class="dropdown-item" href="https://fentybeauty.com/">Fenty Beauty</a></li>
+                            <li><a class="dropdown-item" href="https://www.kiehls.com/">Kiehl’s</a></li>
+                            <li><a class="dropdown-item" href="https://www.thebodyshop.pk/">The Body Shop</a></li>
+                            <li><a class="dropdown-item" href="https://tartecosmetics.com/">Tarte</a></li>
+                            <li><a class="dropdown-item" href="https://www.anastasiabeverlyhills.com/">Anastasia Beverly Hills</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+
+                <div class="d-flex">
+                    <button class="btn"
+                        style="color: black; background-color: #e7ca71; border: none; height: 40px; border-radius: 2px; text-align: center;"
+                        type="button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a  href="cart.html">   <b>CART</b>  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Product Detail Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <!-- Main Product Image -->
+                <div class="product-detail" id="mainProductDetail">
+                    <img id="mainProductImage" src="img/el_sku_PG5001_640x640_0.avif" class="product-image" alt="Estée Lauder Advanced Night Repair">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <!-- Product Info -->
+                <div class="product-detail" id="mainProductInfo">
+                    <h2 id="mainProductTitle" class="product-title">Estée Lauder Advanced Night Repair</h2>
+                    <p id="mainProductPrice" class="product-price">2000 PKR</p>
+                    <p id="mainProductDescription" class="product-description">This advanced serum helps reduce the appearance of fine lines and wrinkles, providing a smoother and more radiant complexion with overnight healing properties.</p>
+                    <p id="mainProductRating" class="product-rating">⭐⭐⭐⭐⭐</p>
+
+                   
+                    <!-- <button class="add-to-cart-btn" onclick="addtocart()">Add to Cart</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Products Section -->
+    <div class="container additional-products">
+        <h3>Other Products</h3>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Estée Lauder Advanced Night Repair', '3400 PKR', 'This serum deeply hydrates the skin for youthful radiance and softer texture.', 'img/el_sku_PG5001_640x640_0.avif', '⭐⭐⭐⭐⭐')">
+                <div class="product-detail">
+                    <img src="img/el_sku_PG5001_640x640_0.avif" class="product-image" alt="Product 1">
+                    <h5 class="product-title-sm"><b>Estée Lauder Night Repair</b></h5>
+                    <button  class="add-to-cart-btn" onclick="addToCart('Estée Lauder Night Repair',3400,'img/el_sku_PG5001_640x640_0.avif' )">Add to Cart</button>
+
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('L\'Oréal Paris Revitalift', '1999 PKR', 'This serum revitalizes your skin for a more youthful appearance.', 'img/71z8G1EAd+L._SL1500_.jpg', '⭐⭐⭐⭐')">
+                <div class="product-detail">
+                    <img src="img/71z8G1EAd+L._SL1500_.jpg" class="product-image" alt="Product 2">
+                    <h5 class="product-title-sm"><b>L'Oréal Paris Revitalift</b></h5>
+                    <button  class="add-to-cart-btn" onclick="addToCart('L\'Oréal Paris Revitalift',1999,'img/71z8G1EAd+L._SL1500_.jpg' )">Add to Cart</button>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Clinique Dramatically Different Moisturizing Gel', '2300 PKR', 'Clinique\'s Moisturizing Gel provides oil-free moisture for combination or oily skin types.', 'img2/45270.jpg', '⭐⭐⭐⭐')">
+                <div class="product-detail">
+                    <img src="img2/45270.jpg" class="product-image" alt="Product 6">
+                    <h5 class="product-title-sm"><b>Clinique Moisturizing Gel</b></h5>
+                    <button  class="add-to-cart-btn" onclick="addToCart('Clinique Dramatically Different Moisturizing Gel',2300,'img2/45270.jpg' )">Add to Cart</button>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('La Mer Moisturizing Cream', '3100 PKR', 'La Mer\'s Moisturizing Cream is rich and deeply hydrates skin while reducing fine lines and wrinkles.', 'img2/572f1462-0024-4f42-be3c-6412afda1429.jpg', '⭐⭐⭐⭐⭐')">
+                <div class="product-detail">
+                    <img src="img2/572f1462-0024-4f42-be3c-6412afda1429.jpg" class="product-image" alt="Product 5">
+                    <h5 class="product-title-sm"><b>La Mer Moisturizing Cream</b></h5>
+                    <button  class="add-to-cart-btn" onclick="addToCart('La Mer Moisturizing Cream',3100,'img2/572f1462-0024-4f42-be3c-6412afda1429.jpg' )">Add to Cart</button>
+
+                   
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Neutrogena Hydro Boost Water Gel', '1750 PKR', 'Neutrogena Hydro Boost is a lightweight moisturizer that quenches dry skin.', 'img/6811047_Carousel_2.webp', '⭐⭐⭐⭐')">
+                <div class="product-detail">
+                    <img src="img/6811047_Carousel_2.webp" class="product-image" alt="Product 4">
+                    <h5 class="product-title-sm"><b>Neutrogena Hydro Boost</b></h5>
+                    <button  class="add-to-cart-btn" onclick="addToCart('Estée Lauder Night Repair',3400,'img/el_sku_PG5001_640x640_0.avif' )">Add to Cart</button>
+
+                  
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Olay Regenerist Micro-Sculpting Cream', '3999 PKR', 'Olay Regenerist Micro-Sculpting Cream targets fine lines, wrinkles, and sagging skin.', 'img2/1.19_MSC_Whip_MOI__85790.jpg', '⭐⭐⭐⭐⭐')">
+                <div class="product-detail">
+                    <img src="img2/1.19_MSC_Whip_MOI__85790.jpg" class="product-image" alt="Product 3">
+                    <h5 class="product-title-sm"><b>Olay Regenerist</b></h5>
+                    <button  class="add-to-cart-btn" onclick="addToCart('Olay Regenerist',3999,'img2/1.19_MSC_Whip_MOI__85790.jpg' )">Add to Cart</button>
+
+                    
+                </div>
+            </div>
+
+                        <!-- Product 7 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('The Ordinary Niacinamide 10% + Zinc 1%', '1600 PKR', 'This serum helps regulate sebum production and improves skin texture.', 'img2/The-Ordinary-Niacinamide-1.webp', '⭐⭐⭐⭐⭐')">
+                            <div class="product-detail">
+                                <img src="img2/The-Ordinary-Niacinamide-1.webp" class="product-image" alt="Product 7">
+                                <h5 class="product-title-sm"><b>The Ordinary Niacinamide</b></h5>
+                                <button  class="add-to-cart-btn" onclick="addToCart('The Ordinary Niacinamide',1600,'img2/The-Ordinary-Niacinamide-1.webp' )">Add to Cart</button>
+
+                            </div>
+                        </div>
+            
+                        <!-- Product 8 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('CeraVe Hydrating Facial Cleanser', '3300 PKR', 'A gentle, hydrating cleanser for dry and sensitive skin.', 'img2/Cerave-Hydrating-Facial-Cleanser-For-Normal-To-Dry-Skin-237Ml-1-1.webp', '⭐⭐⭐⭐⭐')">
+                            <div class="product-detail">
+                                <img src="img2/Cerave-Hydrating-Facial-Cleanser-For-Normal-To-Dry-Skin-237Ml-1-1.webp" class="product-image" alt="Product 8">
+                                <h5 class="product-title-sm"><b>CeraVe Hydrating Cleanser</b></h5>
+                                <button  class="add-to-cart-btn" onclick="addToCart('CeraVe Hydrating Cleanser',3300,'img2/Cerave-Hydrating-Facial-Cleanser-For-Normal-To-Dry-Skin-237Ml-1-1.webp' )">Add to Cart</button>
+
+                            </div>
+                        </div>
+            
+                        <!-- Product 9 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Drunk Elephant C-Firma Vitamin C Day Serum', '2800 PKR', 'A potent vitamin C serum to brighten and firm your skin.', 'img2/Drunk_Elephant_C_Firma_Day_Serum_review_title_big_size.avif', '⭐⭐⭐⭐')">
+                            <div class="product-detail">
+                                <img src="img2/Drunk_Elephant_C_Firma_Day_Serum_review_title_big_size.avif" class="product-image" alt="Product 9">
+                                <h5 class="product-title-sm"><b>Drunk Elephant C-Firma</b></h5>
+                                <button  class="add-to-cart-btn" onclick="addToCart('Drunk Elephant C-C-Firma',2800,'img2/Drunk_Elephant_C_Firma_Day_Serum_review_title_big_size.avif' )">Add to Cart</button>
+
+                            </div>
+                        </div>
+            
+                        <!-- Product 10 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Bioderma Sensibio H2O Micellar Water', '1000 PKR', 'A micellar cleansing water suitable for sensitive skin.', 'img2/bioderma.jfif', '⭐⭐⭐⭐⭐')">
+                            <div class="product-detail">
+                                <img src="img2/bioderma.jfif" class="product-image" alt="Product 10">
+                                <h5 class="product-title-sm"><b>Bioderma Micellar Water</b></h5>
+                                <button  class="add-to-cart-btn" onclick="addToCart('Bioderma Micellar Water',1000,'img/img2/bioderma.jfif' )">Add to Cart</button>
+
+                               
+                            </div>
+                        </div>
+            
+                        <!-- Product 11 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Tatcha The Dewy Skin Cream', '2500 PKR', 'A rich cream for glowing, dewy skin.', 'img2/tatcha.jfif', '⭐⭐⭐⭐')">
+                            <div class="product-detail">
+                                <img src="img2/tatcha.jfif" class="product-image" alt="Product 11">
+                                <h5 class="product-title-sm"><b>Tatcha Dewy Skin Cream</b></h5>
+                                <button  class="add-to-cart-btn" onclick="addToCart('Tatcha Dewy Skin Cream',2500,'img2/tatcha.jfif' )">Add to Cart</button>
+
+                                
+                            </div>
+                        </div>
+            
+                        <!-- Product 12 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 product" onclick="changeProduct('Kiehl\'s Ultra Facial Cream', '2000 PKR', '24-hour hydration for smoother, softer skin.', 'img2/keihl.jpg', '⭐⭐⭐⭐⭐')">
+                            <div class="product-detail">
+                                <img src="img2/keihl.jpg" class="product-image" alt="Product 12">
+                                <h5 class="product-title-sm"><b>Kiehl's Ultra Facial Cream</b></h5>
+                                <button  class="add-to-cart-btn" onclick="addToCart('Kiehls Ultra Facial Cream',2000,'img2/keihl.jpg' )">Add to Cart</button>
+
+                             
+                            </div>
+                        </div>
+            
+            <!-- More products can be added here -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SIMPLON,s Beauty care. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function changeProduct(title, price, description, imageSrc, rating) {
+            $('#mainProductDetail').slideUp(300, function () {
+                $('#mainProductInfo').slideUp(300, function () {
+                    
+                    $('#mainProductTitle').text(title);
+                    $('#mainProductPrice').text(price);
+                    $('#mainProductDescription').text(description);
+                    $('#mainProductImage').attr('src', imageSrc);
+                    $('#mainProductRating').text(rating);
+                    $('#mainProductDetail').slideDown(300);
+                    $('#mainProductInfo').slideDown(300);
+                });
+            });
+        }
+
+     
+        $('.add-to-cart-btn').on('click', function () {
+            alert('Product added to cart!');
+        });
+
+      
+function addToCart(productName, price,img) {
+
+  let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+
+  cart.push({ productName, price,img });
+
+  sessionStorage.setItem('cart', JSON.stringify(cart));
+
+  alert(`${productName} added to cart!`);
+}
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

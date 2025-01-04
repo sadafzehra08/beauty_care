@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <!-- Bootstrap CSS -->
+  
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .image-container {
+            height: 400px; /* Adjust the height based on your needs */
+            overflow: hidden; /* Optional: Hide any overflow */
+        }
+
+        /* Basic navigation bar styling */
+/* Basic navigation bar styling */
+
+.bgcolor{background: rgb(223,205,242);
+background: radial-gradient(circle, rgba(223,205,242,1) 0%, rgba(229,199,242,1) 100%);}
+
+.logocircle{clip-path: circle(50% at 50% 50%);
+}
+
+.circle {
+            width: 100px;        /* Set the width of the circle */
+            height: 100px;       /* Set the height of the circle */
+            border-radius: 50%;  /* Make it a circle */
+            background-color: #3498db; /* Set a background color */
+            margin: 10px;        /* Add margin for spacing between circles */
+            display: inline-block;
+        }
+</style>
+
+</head>
+
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bgcolor">
+        <div class="container-fluid">
+            <!-- Logo (left side) -->
+            <a class="navbar-brand logocircle" href="#">
+                <img src="logoimg.jpg" alt="Logo" style="height: 40px;">
+            </a>
+
+            <!-- Navbar toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links (center) -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Order button (right side) -->
+        
+            <a class="btn btn-success d-flex align-items-center" href="#" role="button">
+                <i class="bi bi-cart">      Add to Cart
+                </i>
+          
+
+            </a>
+        </div>
+    </nav>
+<!-- <div class="container-fluid md">
+    <img src="Main-banner-desktop.png" alt="" class="bannerimg">
+</div> -->
+<div class="container-fluid">
+    <div class="image-container">
+        <img src="Main-banner-desktop.png" alt="Responsive Image" class="img-fluid w-100">
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <div class="circle" >
+        
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="circle"> </div>
+        </div>
+        <div class="col-auto">
+            <div class="circle"> </div>
+        </div>
+        <div class="col-auto">
+            <div class="circle"></div>
+        </div>
+        <div class="col-auto">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

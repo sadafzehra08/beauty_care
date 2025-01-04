@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care - SIMPLON's Beauty Care</title>
+    <link rel="icon" href="img2/simplons_logo-removebg-preview.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8d1d1;
+            color: #000000;
+            margin: 0;
+        }
+
+        .navbar{
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        .navbar .dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8d1d1; /* Light pink for branding */
+}
+
+        header {
+            background-color: #000000;
+            color: #f8d1d1;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 3px solid #f8d1d1;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card-body h5 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .product-card-body p {
+            font-size: 14px;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .btn-orange {
+            background-color:#f8d1d1;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        .btn-orange:hover {
+            background-color: #000000;
+            color: #f8d1d1;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/make_me_a_logo_of_a_beauty_website_called_SIMPLON_s_beauty_care__website_theme_is_primary_color_is_pink_secondary_is_white_and_black__make_it_in_a_circle-removebg-preview.png" alt="SIMPLON Beauty Care" style="width: 150px; height: 90px;">
+            </a>
+          
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0"
+                    style="font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="aboutus.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="contactus.html">Contact us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="brandsDropdownNav" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="brandsDropdownNav">
+                            <li><a class="dropdown-item" href="https://www.loreal.com/en/">L'Oréal</a></li>
+                            <li><a class="dropdown-item" href="https://www.esteelauder.com/">Estée Lauder</a></li>
+                            <li><a class="dropdown-item" href="https://www.lancome-usa.com/">Lancôme</a></li>
+                            <li><a class="dropdown-item" href="https://www.maccosmetics.com/">MAC Cosmetics</a></li>
+                            <li><a class="dropdown-item" href="https://www.makeupcityshop.com/">Maybelline</a></li>
+                            <li><a class="dropdown-item" href="https://www.clinique.com/">Clinique</a></li>
+                            <li><a class="dropdown-item" href="https://www.chanel.com/in/">Chanel</a></li>
+                            <li><a class="dropdown-item" href="https://www.dior.com/en_us/beauty/home-makeup/home-makeup.html">Dior</a></li>
+                            <li><a class="dropdown-item" href="https://www.narscosmetics.com/">NARS</a></li>
+                            <li><a class="dropdown-item" href="https://hudabeauty.com/">Huda Beauty</a></li>
+                            <li><a class="dropdown-item" href="https://fentybeauty.com/">Fenty Beauty</a></li>
+                            <li><a class="dropdown-item" href="https://www.kiehls.com/">Kiehl’s</a></li>
+                            <li><a class="dropdown-item" href="https://www.thebodyshop.pk/">The Body Shop</a></li>
+                            <li><a class="dropdown-item" href="https://tartecosmetics.com/">Tarte</a></li>
+                            <li><a class="dropdown-item" href="https://www.anastasiabeverlyhills.com/">Anastasia Beverly Hills</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+
+                <div class="d-flex">
+                    <button class="btn"
+                        style="color: black; background-color: #e7ca71; border: none; height: 40px; border-radius: 2px; text-align: center;"
+                        type="button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a  href="cart.html">   <b>CART</b>  </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Discover Skin Care Solutions</h1>
+        <p>Nurture and rejuvenate your skin with our best-selling products.</p>
+    </header>
+
+    <!-- Skin Care Products Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="img/i77.jpg" alt="Moisturizer">
+                    <div class="product-card-body">
+                        <h5>Hydrating Moisturizer</h5>
+                        <p>Locks in moisture for radiant and healthy skin.</p>
+                        <button class="btn btn-orange">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="img/i88.jpg" alt="Cleanser">
+                    <div class="product-card-body">
+                        <h5>Gentle Cleanser</h5>
+                        <p>Removes impurities without stripping natural oils.</p>
+                        <button class="btn btn-orange">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="img/i87.jpg" alt="Face Serum">
+                    <div class="product-card-body">
+                        <h5>Brightening Serum</h5>
+                        <p>Enriched with vitamins to revitalize dull skin.</p>
+                        <button class="btn btn-orange">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SIMPLON's Beauty Care. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
